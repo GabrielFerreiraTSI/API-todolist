@@ -5,10 +5,9 @@ const getAll = async (request, response) => {
     return response.status(200).json(tasks);
 };
 
-const createTasks = async (task) => {
-    const {title} = task;
-    const query = "INSERT INTO tasks(id, title, status, created_at) VALUES(?, ?, ?)";
-    const createdTask = await connection.execute(query, [title, "pendente", "data"]);
+const createTasks = async (request, reponse) => {
+    //const createdTask = await tasksModel.createTasks();
+    return reponse.status(200).json(createdTask);
 }
 
 module.exports = {
